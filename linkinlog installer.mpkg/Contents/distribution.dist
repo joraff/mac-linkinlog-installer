@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<installer-script minSpecVersion="1.000000" authoringTool="com.apple.PackageMaker" authoringToolVersion="3.0.4" authoringToolBuild="179">
+    <title>linkinlog installer</title>
+    <options customize="allow" allow-external-scripts="no" rootVolumeOnly="false"/>
+    <choices-outline>
+        <line choice="choice0"/>
+        <line choice="choice1"/>
+    </choices-outline>
+    <choice id="choice0" title="edu.baylor.linkinlog">
+        <pkg-ref id="edu.baylor.linkinlogInstaller.edu.baylor.linkinlog.pkg"/>
+    </choice>
+    <choice id="choice1" title="client_login">
+        <pkg-ref id="edu.baylor.linkinlogInstaller.client_login.pkg"/>
+    </choice>
+    <pkg-ref id="edu.baylor.linkinlogInstaller.edu.baylor.linkinlog.pkg" installKBytes="4" version="1.0" auth="Root">file:./Contents/Packages/edubaylorlinkinlog.pkg</pkg-ref>
+    <pkg-ref id="edu.baylor.linkinlogInstaller.client_login.pkg" installKBytes="4" version="1.0" auth="Root">file:./Contents/Packages/clientlogin.pkg</pkg-ref>
+</installer-script>
